@@ -1,0 +1,54 @@
+{
+  "name": "EmergencyProfile",
+  "type": "object",
+  "properties": {
+    "owner_email": {
+      "type": "string",
+      "description": "User who owns this profile"
+    },
+    "blood_group": {
+      "type": "string",
+      "enum": [
+        "A+",
+        "A-",
+        "B+",
+        "B-",
+        "AB+",
+        "AB-",
+        "O+",
+        "O-",
+        "Unknown"
+      ]
+    },
+    "allergies": {
+      "type": "string",
+      "description": "Known allergies"
+    },
+    "medical_conditions": {
+      "type": "string",
+      "description": "Ongoing medical conditions"
+    },
+    "medications": {
+      "type": "string",
+      "description": "Current medications"
+    },
+    "next_of_kin_name": {
+      "type": "string"
+    },
+    "next_of_kin_phone": {
+      "type": "string"
+    },
+    "next_of_kin_relationship": {
+      "type": "string"
+    },
+    "doctor_name": {
+      "type": "string"
+    },
+    "doctor_phone": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "owner_email"
+  ]
+}

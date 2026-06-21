@@ -1,0 +1,77 @@
+{
+  "name": "Incident",
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": [
+        "Accident",
+        "Traffic",
+        "Bad Road",
+        "Security Threat",
+        "Kidnapping",
+        "Robbery",
+        "Protest",
+        "Flooding",
+        "Fire",
+        "Other"
+      ],
+      "description": "Type of incident"
+    },
+    "description": {
+      "type": "string",
+      "description": "Short description of the incident"
+    },
+    "latitude": {
+      "type": "number",
+      "description": "Latitude of incident location"
+    },
+    "longitude": {
+      "type": "number",
+      "description": "Longitude of incident location"
+    },
+    "location_name": {
+      "type": "string",
+      "description": "Human-readable location name"
+    },
+    "state": {
+      "type": "string",
+      "description": "Nigerian state where incident occurred"
+    },
+    "severity": {
+      "type": "string",
+      "enum": [
+        "safe",
+        "caution",
+        "danger"
+      ],
+      "description": "Severity level"
+    },
+    "photo_url": {
+      "type": "string",
+      "description": "Optional photo URL"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "resolved",
+        "expired"
+      ],
+      "description": "Current status of incident"
+    },
+    "upvotes": {
+      "type": "number",
+      "description": "Number of confirmations from other users"
+    }
+  },
+  "required": [
+    "type",
+    "description",
+    "latitude",
+    "longitude",
+    "state",
+    "severity",
+    "status"
+  ]
+}

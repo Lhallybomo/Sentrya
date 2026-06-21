@@ -1,0 +1,58 @@
+{
+  "name": "Alert",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Alert title"
+    },
+    "description": {
+      "type": "string",
+      "description": "Alert details"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "incident",
+        "traffic",
+        "travel_warning",
+        "security",
+        "weather",
+        "general"
+      ],
+      "description": "Alert type"
+    },
+    "state": {
+      "type": "string",
+      "description": "Affected state"
+    },
+    "city": {
+      "type": "string",
+      "description": "Affected city"
+    },
+    "severity": {
+      "type": "string",
+      "enum": [
+        "safe",
+        "caution",
+        "danger"
+      ],
+      "description": "Severity level"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "resolved"
+      ],
+      "description": "Alert status"
+    }
+  },
+  "required": [
+    "title",
+    "description",
+    "type",
+    "severity",
+    "status"
+  ]
+}

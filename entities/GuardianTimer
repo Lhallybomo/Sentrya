@@ -1,0 +1,52 @@
+{
+  "name": "GuardianTimer",
+  "type": "object",
+  "properties": {
+    "owner_email": {
+      "type": "string",
+      "description": "User who set the timer"
+    },
+    "destination": {
+      "type": "string",
+      "description": "Where they are going"
+    },
+    "expected_arrival": {
+      "type": "string",
+      "description": "ISO datetime of expected arrival"
+    },
+    "duration_minutes": {
+      "type": "number",
+      "description": "Duration in minutes set by user"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "arrived",
+        "missed",
+        "cancelled"
+      ],
+      "default": "active"
+    },
+    "last_location_lat": {
+      "type": "number"
+    },
+    "last_location_lng": {
+      "type": "number"
+    },
+    "reminder_sent": {
+      "type": "boolean",
+      "default": false
+    },
+    "alert_sent": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "owner_email",
+    "destination",
+    "expected_arrival",
+    "status"
+  ]
+}

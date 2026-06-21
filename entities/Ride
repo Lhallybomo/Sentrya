@@ -1,0 +1,112 @@
+{
+  "name": "Ride",
+  "type": "object",
+  "properties": {
+    "passenger_email": {
+      "type": "string",
+      "description": "Passenger email"
+    },
+    "driver_email": {
+      "type": "string",
+      "description": "Assigned driver email"
+    },
+    "pickup_location": {
+      "type": "string",
+      "description": "Pickup address"
+    },
+    "pickup_lat": {
+      "type": "number"
+    },
+    "pickup_lng": {
+      "type": "number"
+    },
+    "destination_location": {
+      "type": "string",
+      "description": "Destination address"
+    },
+    "dest_lat": {
+      "type": "number"
+    },
+    "dest_lng": {
+      "type": "number"
+    },
+    "city": {
+      "type": "string",
+      "enum": [
+        "Lagos",
+        "Abuja",
+        "Port Harcourt"
+      ],
+      "description": "City where ride is requested"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "dispatching",
+        "accepted",
+        "in_progress",
+        "completed",
+        "cancelled"
+      ],
+      "description": "Ride status"
+    },
+    "ride_mode": {
+      "type": "string",
+      "enum": [
+        "app_booking",
+        "along"
+      ],
+      "default": "app_booking",
+      "description": "How the ride was initiated"
+    },
+    "fare_estimate": {
+      "type": "number",
+      "description": "Estimated fare in Naira"
+    },
+    "ride_type": {
+      "type": "string",
+      "enum": [
+        "economy",
+        "comfort",
+        "premium"
+      ],
+      "description": "Type of ride"
+    },
+    "scheduled_time": {
+      "type": "string",
+      "description": "ISO datetime string for scheduled rides"
+    },
+    "driver_lat": {
+      "type": "number",
+      "description": "Live driver latitude"
+    },
+    "driver_lng": {
+      "type": "number",
+      "description": "Live driver longitude"
+    },
+    "driver_name": {
+      "type": "string",
+      "description": "Driver full name snapshot"
+    },
+    "driver_phone": {
+      "type": "string",
+      "description": "Driver phone snapshot"
+    },
+    "vehicle_info": {
+      "type": "string",
+      "description": "Vehicle details snapshot"
+    },
+    "declined_drivers": {
+      "type": "string",
+      "description": "Comma-separated driver emails that declined this ride"
+    }
+  },
+  "required": [
+    "passenger_email",
+    "pickup_location",
+    "destination_location",
+    "status",
+    "ride_mode"
+  ]
+}

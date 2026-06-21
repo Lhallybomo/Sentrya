@@ -1,0 +1,85 @@
+{
+  "name": "Driver",
+  "type": "object",
+  "properties": {
+    "full_name": {
+      "type": "string",
+      "description": "Driver full name"
+    },
+    "email": {
+      "type": "string",
+      "description": "Driver email"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Phone number"
+    },
+    "city": {
+      "type": "string",
+      "enum": [
+        "Lagos",
+        "Abuja",
+        "Port Harcourt",
+        "Kano",
+        "Ibadan",
+        "Enugu",
+        "Kaduna",
+        "Other"
+      ],
+      "description": "Operating city"
+    },
+    "vehicle_make": {
+      "type": "string",
+      "description": "Car make e.g. Toyota"
+    },
+    "vehicle_model": {
+      "type": "string",
+      "description": "Car model e.g. Corolla"
+    },
+    "vehicle_color": {
+      "type": "string"
+    },
+    "plate_number": {
+      "type": "string"
+    },
+    "vehicle_type": {
+      "type": "string",
+      "enum": [
+        "economy",
+        "comfort",
+        "premium"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "approved",
+        "suspended"
+      ],
+      "description": "Approval status"
+    },
+    "rating": {
+      "type": "number",
+      "description": "Average rating out of 5"
+    },
+    "total_trips": {
+      "type": "number"
+    },
+    "is_online": {
+      "type": "boolean",
+      "description": "Whether driver is online/available"
+    }
+  },
+  "required": [
+    "full_name",
+    "email",
+    "phone",
+    "city",
+    "vehicle_make",
+    "vehicle_model",
+    "plate_number",
+    "vehicle_type",
+    "status"
+  ]
+}

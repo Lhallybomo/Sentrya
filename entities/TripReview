@@ -1,0 +1,30 @@
+{
+  "name": "TripReview",
+  "type": "object",
+  "properties": {
+    "ride_id": {
+      "type": "string",
+      "description": "FK to Ride entity"
+    },
+    "passenger_email": {
+      "type": "string"
+    },
+    "driver_email": {
+      "type": "string"
+    },
+    "rating": {
+      "type": "number",
+      "description": "1-5 star rating"
+    },
+    "comment": {
+      "type": "string",
+      "description": "Optional passenger comment"
+    }
+  },
+  "required": [
+    "ride_id",
+    "passenger_email",
+    "driver_email",
+    "rating"
+  ]
+}

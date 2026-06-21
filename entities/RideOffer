@@ -1,0 +1,52 @@
+{
+  "name": "RideOffer",
+  "type": "object",
+  "properties": {
+    "ride_id": {
+      "type": "string",
+      "description": "Related ride ID"
+    },
+    "driver_email": {
+      "type": "string"
+    },
+    "driver_name": {
+      "type": "string"
+    },
+    "driver_phone": {
+      "type": "string"
+    },
+    "vehicle_info": {
+      "type": "string",
+      "description": "e.g. Toyota Corolla - White - ABC123XY"
+    },
+    "offered_price": {
+      "type": "number",
+      "description": "Driver's offered fare in Naira"
+    },
+    "counter_price": {
+      "type": "number",
+      "description": "Passenger's counter-offer"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "countered",
+        "accepted",
+        "rejected"
+      ],
+      "description": "Negotiation status"
+    },
+    "message": {
+      "type": "string",
+      "description": "Optional message from driver"
+    }
+  },
+  "required": [
+    "ride_id",
+    "driver_email",
+    "driver_name",
+    "offered_price",
+    "status"
+  ]
+}

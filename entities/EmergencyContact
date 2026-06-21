@@ -1,0 +1,31 @@
+{
+  "name": "EmergencyContact",
+  "type": "object",
+  "properties": {
+    "contact_name": {
+      "type": "string",
+      "description": "Contact full name"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Phone number with country code"
+    },
+    "email": {
+      "type": "string",
+      "description": "Email address"
+    },
+    "relationship": {
+      "type": "string",
+      "description": "Relationship to user"
+    },
+    "owner_email": {
+      "type": "string",
+      "description": "Email of the user who owns this contact"
+    }
+  },
+  "required": [
+    "contact_name",
+    "phone",
+    "owner_email"
+  ]
+}
